@@ -1,0 +1,35 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Device Status Checker</h1>
+    <p class="lead">
+        Project idea was to create a tool that monitors embedded devices that use linux as the operational system.
+        The goal was to check embedded linux board's status by checking serial and ssh conntection, running docker containers,
+        enviromental variables and checking if desired systemctl services are running.
+    </p>
+    <p><a href="{% url 'devices' %}" class="btn btn-primary btn-large">Open App &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>More information</h2>
+        <p>
+            Learn More about the project, goal and tools used on about page.
+        </p>
+        <p><a class="btn btn-custom" href="{% url 'about' %}">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Visit project's github</h2>
+        <p>Examine the code available at the GitHub repository of the project.</p>
+        <p><a class="btn btn-custom" href="https://github.com/Spectyte5/Device_Status_Checker">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Contact the author</h2>
+        <p>If you need to contact the author of this page, you can do so by email, given below.</p>
+        <p><a class="btn btn-custom" href="{% url 'contact' %}">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}

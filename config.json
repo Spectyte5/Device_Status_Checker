@@ -1,0 +1,28 @@
+{
+  "devices": [
+    {
+      "name": "NanoPi Neo2 Board 1",
+      "hostname": "nanopi-neo2-1",
+      "usb": "/dev/ttyACM0",
+      "docker": true,
+      "systemctl": [ "systemd-journald", "ssh" ],
+      "variables": [ "SHELL", "LANG", "TERM" ]
+    },
+    {
+      "name": "NanoPi Neo2 Board 2",
+      "hostname": "nanopi-neo2-2",
+      "usb": "/dev/ttyACM1",
+      "docker": true,
+      "systemctl": [ "systemd-journald", "ssh" ],
+      "variables": [ "SHELL", "LANG", "TERM", "HOME" ]
+    },
+    {
+      "name": "NanoPi Neo2 Board 3",
+      "hostname": "nanopi-neo2-3",
+      "usb": false,
+      "docker": true,
+      "systemctl": [ "systemd-journald", "ssh" ],
+      "variables": [ "SHELL", "LANG", "TERM", "HOME" ]
+    }
+  ]
+}

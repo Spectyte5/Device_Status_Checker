@@ -1,0 +1,38 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<h3>{{ title }}</h3>
+<p>Data was obtained at {{ date|date:"d.m.Y H:i:s" }}</p>
+<div class="container mt-5">
+    <table class="table table-custom table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Hostname</th>
+                <th>IP</th>
+                <th>Docker</th>
+                <th>Systemctl</th>
+                <th>Variables</th>
+                <th>USB</th>
+                <th>Busy</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for name, info in devices.items %}
+            <tr>
+                <td>{{ name }}</td>
+                <td>{{ info.hostname }}</td>
+                <td>{{ info.ip }}</td>
+                <td>{{ info.docker }}</td>
+                <td>{{ info.systemctl }}</td>
+                <td>{{ info.variables }}</td>
+                <td>{{ info.usb }}</td>
+                <td>{{ info.busy }}</td>
+                <td class="{% if info.status == 'OK' %}status-ok{% elif info.status == 'BUSY' %}status-busy{% else %}status-fail{% endif %}">{{ info.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

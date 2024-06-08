@@ -1,0 +1,126 @@
+.jumbotron {
+    background-color: #000000;
+    color: #ffffff;
+    padding-top: 50px;
+}
+
+.jumbotron .btn-primary {
+    background-color: #8a2be2;
+    border-color: #8a2be2;
+}
+
+.jumbotron .btn-primary:hover {
+    background-color: #7b1fa2;
+    border-color: #7b1fa2;
+}
+
+.row .btn-default {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+.row .btn-default:hover {
+    background-color: #f0f0f0;
+    color: #000000;
+    border-color: #f0f0f0;
+}
+
+.navbar {
+    background-color: #8a2be2;
+    border-color: #8a2be2;
+}
+
+.navbar-nav li a {
+    color: #ffffff !important;
+    font-size: 15px;
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-size: 18px;
+}
+
+.navbar-nav li a:hover {
+    color: #cccccc !important;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+
+.btn-custom {
+    background-color: #8a2be2;
+    border-color: #8a2be2;
+    color: #ffffff;
+}
+
+.btn-custom:hover {
+    background-color: #7b1fa2;
+    border-color: #7b1fa2;
+    color: #ffffff;
+}
+
+a {
+    color: #8a2be2;
+}
+
+a:hover {
+    color: #d1c4e9;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.article-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px double #dcdcdc;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.article-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-custom {
+    background-color: #8a2be2;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #000; 
+}
+
+.table-custom thead th {
+    background-color: #6a1cb2; 
+    color: #fff; 
+}
+
+.table-custom tbody tr {
+    transition: background-color 0.3s;
+    background-color: #fff; 
+    color: #000; 
+}
+
+.table-custom tbody tr:hover {
+    background-color: #f0f0f0; 
+}
+
+.status-ok {
+    color: #28a745; 
+    font-weight: bold;
+}
+
+.status-busy {
+    color: #dc7935;
+    font-weight: bold;
+}
+
+.status-fail {
+    color: #dc3545;
+    font-weight: bold;
+}

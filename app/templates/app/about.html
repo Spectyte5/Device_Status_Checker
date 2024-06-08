@@ -1,0 +1,23 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="article-container">
+    <h3>{{ title }}</h3>
+    <p>
+        Project idea was to create a tool that monitors embedded devices that use linux as the operational system. 
+        The goal was to check embedded linux board's status by checking different parameters like serial and ssh conntection, 
+        docker containers running, enviromental variables and checking if desired systemctl services are running. 
+    </p>
+    <p>
+        The setup included Raspberry Pi 4b with three Nano Pi Neo2 boards connected to it. All devices were connect to personal ethernet router.
+        All devices were running Linux, Nano Pis using a modified version of armbian, specifically the one based on Jummy,
+        a lightweight Ubuntu version and Raspberry Pi 4b had a Raspbian image used directly from Raspberry repository.
+    </p>
+    <p>
+        The application was build using the Django framwork as backend, which allowed for efficent data managment and processing.
+        The frontend intrerface was designed using HTML, CSS and JavaScript with the addition of bootstrap library for styling.
+        What could be a nice addition is to split obtaining data from its display, to allow a smoother experience and faster access to statuses.
+    </p>
+</div>
+
+{% endblock %}
