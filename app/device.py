@@ -23,21 +23,6 @@ class DeviceHandler():
             name = device_config.pop('name')
             self.devices_dict[name] = {**device_config}
 
-    def handle_login(self, device):
-        ssh_command = f"ssh {self.exporter_username}@{self.exporter_host}"
-        child = wexpect.spawn(ssh_command)
-        child.expect('password:')
-        child.sendline(self.exporter_password)
-        child.expect('[#\$] ')
-        screen_command = f"screen {device['usb']} 115200"
-        child.sendline(screen_command)
-        child.expect('login:')
-        child.sendline(self.targets_username) 
-        child.expect('Password:')
-        child.sendline(self.targets_password)  
-        child.expect('[#\$] ')
-        return child
-
     def check_serial_connection(self, device):
         if self.devices_dict[device]['usb']:
             self.ssh.connect(self.exporter_host, username=self.exporter_username, password=self.exporter_password)
